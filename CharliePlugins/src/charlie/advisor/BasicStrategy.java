@@ -9,13 +9,20 @@ import charlie.card.Card;
 import charlie.card.Hand;
 import charlie.plugin.IAdvisor;
 import charlie.util.Play;
+import charlieplugins.CharliePlugins;
+import java.io.File;
+import java.io.FileInputStream;
 import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.PrintStream;
 import java.io.PrintWriter;
 import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Properties;
+import java.util.logging.Level;
 //import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 import org.slf4j.Logger;
@@ -38,15 +45,17 @@ public class BasicStrategy implements IAdvisor {
     }
     protected final Logger LOG = LoggerFactory.getLogger(BasicStrategy.class);
     protected Map<String, Play> stratCard;
+    protected final Properties props = new Properties();
     
     /**
      * Instantiates stratCard to hold the
      * basic strategy card.
      */
     public BasicStrategy(){
-        //LOG.info("please");
-        stratCard = new HashMap<>();
-        buildStratCard();
+           LOG.info("helllllllllllllllllllllllllllllllllllllllo");
+           System.out.println("hello");
+           stratCard = new HashMap<>();
+           buildStratCard();
     }
     /**
      * The advise method takes as parameters the human 
@@ -62,8 +71,9 @@ public class BasicStrategy implements IAdvisor {
      */
     @Override
     public Play advise(Hand myHand,Card upCard){
-        //LOG.info("******************************************************");
-        return getPlay(myHand, upCard);
+        LOG.info("***************************");
+        System.out.println("*************************hello**********************************");
+       return getPlay(myHand, upCard);
     }
     
     /**
@@ -79,7 +89,8 @@ public class BasicStrategy implements IAdvisor {
      *          an enumerated type in the charlie.util.package
      */
     public Play getPlay(Hand myHand,Card upCard){
-        return Play.HIT;
+        
+        return Play.STAY;
     }
     
     /**
