@@ -69,7 +69,6 @@ public class GameServer {
      * @param args Command line arguments (currently not used)
      */
     public static void main(String[] args) {
-        System.out.println("hello");
         new GameServer().go();
     }
     
