@@ -7,3 +7,5 @@ charlie.shoe charlie.card.Shoe01
 #charlie.bot.n6 charlie.bot.B9
 #charlie.advisor charlie.advice.Advisor
 charlie.advisor charlie.advisor.BasicStrategy
+charlie.bot.b9 charlie.bot.server.Bot
+charlie.shoe charlie.bot.test.Shoe
