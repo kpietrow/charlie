@@ -756,21 +756,24 @@ public final class ATable extends JPanel implements Runnable, IUi, MouseListener
         try {
             // Open the configuration file
             props = new Properties();
-            props.load(new FileInputStream("charlie.props"));
             
+            props.load(new FileInputStream("charlie.props"));
+           
             // Get the side bet view
             String className = props.getProperty(SIDE_BET_VIEW_PROPERTY);
 
+            
             if (className == null)
                 return;
- 
+            
             Class<?> clazz;
+            
             clazz = Class.forName(className);
-
+            
             this.sideBetView = (ISideBetView) clazz.newInstance();
             
             this.sideBetView.setMoneyManager(this.monies.get(Seat.YOU));
-
+            
             LOG.info("successfully loaded side bet rule");
         } catch (ClassNotFoundException | InstantiationException | IllegalAccessException | IOException ex) {
             LOG.error("side bet view failed to load: " + ex);
