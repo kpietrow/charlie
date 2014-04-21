@@ -91,7 +91,7 @@ public class GameFrame extends javax.swing.JFrame {
     protected IAdvisor advisor;
     protected Hand dealerHand;
     private Properties props;
-    private boolean flyingOnManual;
+    protected boolean flyingOnManual = true;
 
     /**
      * Constructor
