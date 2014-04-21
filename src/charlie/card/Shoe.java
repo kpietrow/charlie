@@ -93,7 +93,7 @@ public class Shoe  implements IShoe {
         
         index = 0;
                 
-        burnIndex = cards.size() - ran.nextInt(26);
+        burnIndex = cards.size() - ran.nextInt(13) - 13;
         LOG.info("shuffling burn index = "+burnIndex);
     }
     
